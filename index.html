@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexusCraft Studio - Soluciones integrales de desarrollo web, arquitectura frontend y backend, diseño UI/UX y optimización digital de alto rendimiento.">
+    <meta name="author" content="Oscar Armando Rodarte Lara">
+    <meta name="keywords" content="Desarrollo Web Integral, HTML5, CSS3, JavaScript, DWI, Unidad 3, Oscar Rodarte, NexusCraft">
+    <title>NexusCraft Studio | Desarrollo Web Integral & Soluciones Digitales</title>
+    
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NexusCraft Studio | Desarrollo Web Integral">
+    <meta property="og:description" content="Experiencias web modernas, interactivas y de alto rendimiento.">
+    
+    <!-- Favicon SVG -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Principal -->
+    <header class="navbar-wrapper" id="navbar">
+        <nav class="navbar container">
+            <a href="#inicio" class="brand-logo" aria-label="NexusCraft Inicio">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Nexus<span class="gradient-text">Craft</span></span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Alternar menú de navegación" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#proyectos" class="nav-link">Portafolio</a></li>
+                    <li><a href="#cotizador" class="nav-link">Cotizador</a></li>
+                    <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+                        <span class="theme-icon" id="theme-icon">🌙</span>
+                    </button>
+                    <a href="#cotizador" class="btn btn-primary btn-sm">Iniciar Proyecto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-pill">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Desarrollo Web Integral • Unidad 3</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Construimos el <span class="gradient-text">futuro digital</span> con código de alto impacto
+                    </h1>
+
+                    <p class="hero-description">
+                        Creamos aplicaciones web intuitivas, veloces y escalables. Uniendo arquitectura moderna, 
+                        diseño UI/UX de clase mundial y optimización de vanguardia para impulsar tus ideas.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#proyectos" class="btn btn-primary">
+                            <span>Ver Proyectos</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#cotizador" class="btn btn-secondary">
+                            <span>Calcular Cotización</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="45">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Proyectos Web</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="99">0</span><span class="stat-plus">%</span>
+                            <span class="stat-label">Satisfacción</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+                            <span class="stat-label">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-card-wrapper">
+                        <div class="glow-effect"></div>
+                        <img src="assets/hero_showcase.jpg" alt="Showcase de desarrollo web moderno e interfaces interactivas" class="hero-img" loading="eager">
+                        
+                        <!-- Floating Badges -->
+                        <div class="floating-chip chip-top">
+                            <div class="chip-icon">⚡</div>
+                            <div class="chip-info">
+                                <span class="chip-title">Lighthouse Score</span>
+                                <span class="chip-val">99 / 100</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-chip chip-bottom">
+                            <div class="chip-icon">🛡️</div>
+                            <div class="chip-info">
+                                <span class="chip-title">Arquitectura Web</span>
+                                <span class="chip-val">Limpia & Segura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios / Features Section -->
+        <section class="section-padding bg-surface" id="servicios">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Nuestras Capacidades</span>
+                    <h2 class="section-title">Soluciones Web Integrales de Extremo a Extremo</h2>
+                    <p class="section-subtitle">
+                        Dominio completo del ciclo de vida del software: desde la conceptualización visual hasta el despliegue en producción.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon icon-cyan">🎨</div>
+                        <h3 class="service-title">Desarrollo Frontend Moderno</h3>
+                        <p class="service-text">
+                            Maquetación semántica en HTML5, CSS3 modular (Flexbox, Grid, Custom Properties) y JavaScript ES6+ para experiencias fluidas y accesibles.
+                        </p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Interfaces 100% Mobile-First</li>
+                            <li><span>✓</span> Micro-interacciones & Animaciones</li>
+                            <li><span>✓</span> Estándares de Accesibilidad WCAG</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon icon-violet">⚙️</div>
+                        <h3 class="service-title">Arquitectura Backend & APIs</h3>
+                        <p class="service-text">
+                            Desarrollo de servicios robustos, lógica de negocio escalable, integración de APIs RESTful y gestión de bases de datos estructuradas.
+                        </p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Endpoints seguros y autenticación</li>
+                            <li><span>✓</span> Integración de pasarelas de pago</li>
+                            <li><span>✓</span> Estructuras modulares y eficientes</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon icon-amber">💡</div>
+                        <h3 class="service-title">Diseño UI/UX & Prototipado</h3>
+                        <p class="service-text">
+                            Sistemas de diseño consistentes, wireframes interactivos y componentes reutilizables con un enfoque centrado en la usabilidad del usuario final.
+                        </p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Tipografía y paletas cromáticas armónicas</li>
+                            <li><span>✓</span> Pruebas de usabilidad y flujo de navegación</li>
+                            <li><span>✓</span> Dark & Light Mode dinámicos</li>
+                        </ul>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon icon-emerald">🚀</div>
+                        <h3 class="service-title">Optimización & SEO Técnico</h3>
+                        <p class="service-text">
+                            Tiempos de carga ultrarrápidos, optimización de activos multimedia, etiquetas meta enriquecidas y arquitectura amigable para motores de búsqueda.
+                        </p>
+                        <ul class="service-features">
+                            <li><span>✓</span> Métricas Core Web Vitals optimizadas</li>
+                            <li><span>✓</span> Minificación y compresión de recursos</li>
+                            <li><span>✓</span> Indexación semántica y Open Graph</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portafolio / Proyectos Section -->
+        <section class="section-padding" id="proyectos">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Portafolio Destacado</span>
+                    <h2 class="section-title">Proyectos Diseñados con Excelencia</h2>
+                    <p class="section-subtitle">
+                        Filtra y explora algunos ejemplos prácticos de aplicaciones web y plataformas interactivas.
+                    </p>
+                </div>
+
+                <!-- Categorías de Filtrado -->
+                <div class="portfolio-filters" role="tablist" aria-label="Filtro de proyectos">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="webapp">Web Apps</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="saas">SaaS & Dashboards</button>
+                    <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                </div>
+
+                <!-- Rejilla de Proyectos -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card" data-category="saas" data-id="1">
+                        <div class="project-header">
+                            <span class="project-category">SaaS & Dashboards</span>
+                            <span class="project-status">En Producción</span>
+                        </div>
+                        <h3 class="project-title">NovaCloud Platform</h3>
+                        <p class="project-desc">
+                            Dashboard analítico interactivo con monitoreo de métricas en tiempo real, widgets personalizables y modo nocturno.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm open-modal-btn" data-id="1">Ver Detalles</button>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="project-card" data-category="ecommerce" data-id="2">
+                        <div class="project-header">
+                            <span class="project-category">E-commerce</span>
+                            <span class="project-status">Completado</span>
+                        </div>
+                        <h3 class="project-title">AuraStore Boutique</h3>
+                        <p class="project-desc">
+                            Tienda en línea minimalista con carrito reactivo, filtros dinámicos por precio/categoría y proceso de checkout fluido.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vanilla JS</span>
+                            <span class="tag">Flexbox</span>
+                            <span class="tag">LocalStorage</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm open-modal-btn" data-id="2">Ver Detalles</button>
+                    </div>
+
+                    <!-- Proyecto 3 -->
+                    <div class="project-card" data-category="webapp" data-id="3">
+                        <div class="project-header">
+                            <span class="project-category">Web Apps</span>
+                            <span class="project-status">Interactivo</span>
+                        </div>
+                        <h3 class="project-title">ApexPulse Health Tracker</h3>
+                        <p class="project-desc">
+                            Aplicación para seguimiento de hábitos y bienestar con gráficos dinámicos SVG, registro local de datos y alertas de hidratación.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ES6+</span>
+                            <span class="tag">Canvas/SVG</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm open-modal-btn" data-id="3">Ver Detalles</button>
+                    </div>
+
+                    <!-- Proyecto 4 -->
+                    <div class="project-card" data-category="landing" data-id="4">
+                        <div class="project-header">
+                            <span class="project-category">Landing Pages</span>
+                            <span class="project-status">Optimizado</span>
+                        </div>
+                        <h3 class="project-title">EcoLogix Supply</h3>
+                        <p class="project-desc">
+                            Landing page corporativa para consultoría ambiental con 100 de puntaje en SEO, transiciones suaves y formulario de contacto validado.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">SEO Técnico</span>
+                            <span class="tag">CSS Animations</span>
+                            <span class="tag">Semántica</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm open-modal-btn" data-id="4">Ver Detalles</button>
+                    </div>
+
+                    <!-- Proyecto 5 -->
+                    <div class="project-card" data-category="saas" data-id="5">
+                        <div class="project-header">
+                            <span class="project-category">SaaS & Dashboards</span>
+                            <span class="project-status">En Línea</span>
+                        </div>
+                        <h3 class="project-title">CryptoSphere Terminal</h3>
+                        <p class="project-desc">
+                            Terminal financiera para visualización de divisas y criptoactivos con calculadora integrada y conversión instantánea.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Fetch API</span>
+                            <span class="tag">Glassmorphism</span>
+                            <span class="tag">CSS Vars</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm open-modal-btn" data-id="5">Ver Detalles</button>
+                    </div>
+
+                    <!-- Proyecto 6 -->
+                    <div class="project-card" data-category="webapp" data-id="6">
+                        <div class="project-header">
+                            <span class="project-category">Web Apps</span>
+                            <span class="project-status">Prototipo</span>
+                        </div>
+                        <h3 class="project-title">TaskFlow Agile Kanban</h3>
+                        <p class="project-desc">
+                            Organizador de tareas estilo tablero Kanban con drag-and-drop nativo en JavaScript, persistencia y filtros de prioridad.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Drag & Drop API</span>
+                            <span class="tag">DOM Manipulation</span>
+                        </div>
+                        <button class="btn btn-outline btn-sm open-modal-btn" data-id="6">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculadora / Cotizador Interactivo Section -->
+        <section class="section-padding bg-surface" id="cotizador">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Herramienta Interactiva</span>
+                    <h2 class="section-title">Calcula el Presupuesto de tu Proyecto</h2>
+                    <p class="section-subtitle">
+                        Configura las características clave que necesitas y obtén un estimado transparente al instante.
+                    </p>
+                </div>
+
+                <div class="calculator-wrapper">
+                    <div class="calc-controls">
+                        <!-- Tipo de Proyecto -->
+                        <div class="calc-group">
+                            <label class="calc-label" for="project-type">1. Tipo de Desarrollo:</label>
+                            <select id="project-type" class="calc-select">
+                                <option value="landing" data-base="350" data-time="1">Landing Page de Alta Conversión ($350 USD)</option>
+                                <option value="corporate" data-base="650" data-time="2" selected>Sitio Web Corporativo Completo ($650 USD)</option>
+                                <option value="ecommerce" data-base="1100" data-time="4">Tienda Online / E-commerce ($1,100 USD)</option>
+                                <option value="webapp" data-base="1600" data-time="5">Aplicación Web Personalizada / SaaS ($1,600 USD)</option>
+                            </select>
+                        </div>
+
+                        <!-- Módulos adicionales -->
+                        <div class="calc-group">
+                            <span class="calc-label">2. Módulos y Funcionalidades Adicionales:</span>
+                            <div class="calc-checkboxes">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" class="feature-checkbox" value="180" data-name="Autenticación y Perfiles de Usuario" checked>
+                                    <span class="custom-check"></span>
+                                    <span class="check-label">Autenticación & Perfiles de Usuario (+$180)</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" class="feature-checkbox" value="250" data-name="Pasarela de Pagos (Stripe/PayPal)">
+                                    <span class="custom-check"></span>
+                                    <span class="check-label">Pasarela de Pagos Segura (+$250)</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" class="feature-checkbox" value="150" data-name="Panel de Administración CMS" checked>
+                                    <span class="custom-check"></span>
+                                    <span class="check-label">Panel de Administración / CMS (+$150)</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" class="feature-checkbox" value="120" data-name="Optimización SEO Avanzada & Speed">
+                                    <span class="custom-check"></span>
+                                    <span class="check-label">Optimización SEO Avanzada & Core Web Vitals (+$120)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Tiempo de entrega -->
+                        <div class="calc-group">
+                            <label class="calc-label" for="urgency-range">
+                                3. Modalidad de Entrega: <span id="urgency-display" class="highlight-text">Estándar (Recomendado)</span>
+                            </label>
+                            <input type="range" id="urgency-range" min="1" max="3" value="2" class="calc-slider">
+                            <div class="slider-labels">
+                                <span>Flexible (-10%)</span>
+                                <span>Estándar</span>
+                                <span>Express (+25%)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Resumen en Tiempo Real -->
+                    <div class="calc-summary">
+                        <div class="summary-card">
+                            <h3 class="summary-title">Resumen de Cotización</h3>
+                            <div class="summary-divider"></div>
+                            
+                            <div class="summary-row">
+                                <span class="summary-key">Servicio Base:</span>
+                                <span class="summary-val" id="summary-base-price">$650 USD</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-key">Extras Seleccionados:</span>
+                                <span class="summary-val" id="summary-extras-price">$330 USD</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-key">Tiempo Estimado:</span>
+                                <span class="summary-val" id="summary-time">2 a 3 Semanas</span>
+                            </div>
+
+                            <div class="summary-total-box">
+                                <span class="total-label">Inversión Estimada:</span>
+                                <div class="total-price" id="total-price">$980 USD</div>
+                                <span class="total-sub">Aprox. <span id="total-mxn">$17,640 MXN</span> (Sin IVA)</span>
+                            </div>
+
+                            <button id="apply-quote-btn" class="btn btn-primary btn-block">
+                                Solicitar esta Cotización
+                            </button>
+                            <p class="summary-disclaimer">
+                                💡 Cotización interactiva para fines demostrativos de Desarrollo Web Integral.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Section -->
+        <section class="section-padding" id="testimonios">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Opiniones Reales</span>
+                    <h2 class="section-title">Confianza de Clientes y Equipos</h2>
+                    <p class="section-subtitle">
+                        El resultado de priorizar la calidad técnica, el diseño moderno y la comunicación clara.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-quote">
+                            "El nivel de detalle en la interfaz y la velocidad de carga superaron nuestras expectativas. El sitio convirtió 40% más desde la primera semana."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍💼</div>
+                            <div class="author-details">
+                                <h4 class="author-name">Valeria Montes</h4>
+                                <span class="author-role">Directora de Marketing, NovaTech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card featured-testimonial">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-quote">
+                            "Excelente arquitectura web. El código es sumamente limpio, modular y fácil de mantener. Un verdadero trabajo de desarrollo integral."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💻</div>
+                            <div class="author-details">
+                                <h4 class="author-name">Carlos Mendoza</h4>
+                                <span class="author-role">Tech Lead, FinFlow Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-quote">
+                            "El diseño responsivo se adapta a la perfección en cualquier móvil o tablet. La experiencia del usuario es sumamente intuitiva."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍🔬</div>
+                            <div class="author-details">
+                                <h4 class="author-name">Andrés Salgado</h4>
+                                <span class="author-role">Fundador, BioSensors Labs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section class="section-padding bg-surface" id="contacto">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Hablemos de tu Idea</span>
+                    <h2 class="section-title">Contáctanos e Inicia tu Proyecto</h2>
+                    <p class="section-subtitle">
+                        Completa el formulario y responderemos a la brevedad con una propuesta técnica a tu medida.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Información de Contacto -->
+                    <div class="contact-info-panel">
+                        <h3 class="panel-title">¿Tienes un proyecto en mente?</h3>
+                        <p class="panel-desc">
+                            Estamos listos para transformar tus requerimientos en una solución web moderna, rápida y adaptable.
+                        </p>
+
+                        <div class="info-items">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <div>
+                                    <h5>Ubicación</h5>
+                                    <p>México • Soporte Remoto Global</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-icon">✉️</span>
+                                <div>
+                                    <h5>Correo Electrónico</h5>
+                                    <p>contacto@nexuscraft.studio</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-icon">🎓</span>
+                                <div>
+                                    <h5>Materia & Alumno</h5>
+                                    <p>Desarrollo Web Integral (U3) — Oscar Armando Rodarte Lara</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="academic-badge-box">
+                            <span class="academic-badge-title">Repositorio GitHub Asociado:</span>
+                            <a href="https://github.com/racso3424/RodarteLaraOscarArmando_U3_DWI" target="_blank" rel="noopener noreferrer" class="github-repo-link">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>racso3424/RodarteLaraOscarArmando_U3_DWI</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulario con Validación -->
+                    <div class="contact-form-panel">
+                        <form id="contact-form" class="styled-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Nombre Completo *</label>
+                                    <input type="text" id="form-name" name="name" placeholder="Ej. Juan Pérez" required>
+                                    <span class="error-msg" id="name-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="form-email">Correo Electrónico *</label>
+                                    <input type="email" id="form-email" name="email" placeholder="juan@ejemplo.com" required>
+                                    <span class="error-msg" id="email-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-service">Servicio Requerido</label>
+                                <select id="form-service" name="service">
+                                    <option value="corporate">Sitio Web Corporativo</option>
+                                    <option value="ecommerce">E-commerce / Tienda Online</option>
+                                    <option value="webapp">Aplicación Web Personalizada</option>
+                                    <option value="landing">Landing Page</option>
+                                    <option value="consulting">Auditoría & Optimización SEO</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">Descripción de tu Idea o Proyecto *</label>
+                                <textarea id="form-message" name="message" rows="4" placeholder="Describe los objetivos, requerimientos o detalles de tu proyecto..." required></textarea>
+                                <span class="error-msg" id="message-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <span>Enviar Mensaje</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Detalles del Proyecto -->
+    <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close" aria-label="Cerrar ventana emergente">&times;</button>
+            <div class="modal-body" id="modal-content">
+                <!-- Se inyecta dinámicamente vía JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de Notificaciones Toast -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+        <div class="container footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#inicio" class="brand-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">Nexus<span class="gradient-text">Craft</span></span>
+                    </a>
+                    <p class="footer-tagline">
+                        Agencia y laboratorio de desarrollo web moderno. Creando experiencias de software intuitivas, atractivas y de alto desempeño.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-title">Navegación</h5>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#proyectos">Portafolio</a></li>
+                        <li><a href="#cotizador">Cotizador</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-title">Tecnologías</h5>
+                    <ul class="footer-links">
+                        <li><span>HTML5 Semántico</span></li>
+                        <li><span>CSS3 Vanilla & Flexbox/Grid</span></li>
+                        <li><span>JavaScript Moderno (ES6+)</span></li>
+                        <li><span>Diseño Mobile-First</span></li>
+                        <li><span>Accesibilidad Web (A11y)</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5 class="footer-title">Datos Académicos</h5>
+                    <div class="student-card">
+                        <p class="student-label">Alumno:</p>
+                        <p class="student-value">Oscar Armando Rodarte Lara</p>
+                        <p class="student-label">Materia:</p>
+                        <p class="student-value">Desarrollo Web Integral</p>
+                        <p class="student-label">Unidad:</p>
+                        <p class="student-value">Unidad 3 (U3)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NexusCraft Studio. Proyecto académico para la materia de Desarrollo Web Integral.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/racso3424/RodarteLaraOscarArmando_U3_DWI" target="_blank" rel="noopener noreferrer" title="GitHub Repository">
+                        GitHub Repo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
