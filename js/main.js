@@ -4,8 +4,8 @@
  * Alumno: Oscar Armando Rodarte Lara
  */
 
-// --- Base de Datos de Productos ---
-const PRODUCTS_DATA = [
+// --- Base de Datos de Productos (Sincronizada con Laravel o fallback local) ---
+let DEFAULT_PRODUCTS = [
     {
         id: 1,
         title: "Aura Pro Wireless Headphones",
@@ -119,6 +119,23 @@ const PRODUCTS_DATA = [
         specs: ["Dimensiones 900 x 400 x 4 mm", "Carga Qi de 15W integrada", "14 modos de iluminación RGB", "Base de goma antideslizante"]
     }
 ];
+
+const PRODUCTS_DATA = (typeof window !== 'undefined' && window.LARAVEL_PRODUCTS && window.LARAVEL_PRODUCTS.length > 0)
+    ? window.LARAVEL_PRODUCTS.map(p => ({
+        id: p.id,
+        title: p.title,
+        category: p.category ? (p.category.slug || p.category) : 'accessories',
+        price: parseFloat(p.price),
+        oldPrice: p.old_price ? parseFloat(p.old_price) : null,
+        badge: p.badge,
+        badgeText: p.badge_text || '',
+        rating: parseFloat(p.rating || 5),
+        reviews: p.reviews_count || 0,
+        emoji: p.emoji || '📦',
+        shortDesc: p.short_desc,
+        specs: Array.isArray(p.specs) ? p.specs : []
+    }))
+    : DEFAULT_PRODUCTS;
 
 // --- Estado Global de la Tienda ---
 let cart = JSON.parse(localStorage.getItem('nexustech_cart')) || [];
